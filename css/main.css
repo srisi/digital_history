@@ -12,6 +12,10 @@ body {
     padding-bottom: 10%;
 }
 
+.container{
+    margin-top: 8rem;
+}
+
 
 h1 {
     font-weight: 400;
@@ -45,8 +49,13 @@ img {
 
 h3{
     margin-left: -20px;
+    margin-bottom: 1rem;
 }
 
 h4{
     font-size: 1.4rem;
+}
+
+.bold{
+    font-weight: bold;
 }
