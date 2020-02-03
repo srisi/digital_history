@@ -7,6 +7,10 @@ body {
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
+.nav-item{
+    font-size: 1.2rem;
+}
+
 .column {
     display: flex;
     flex-direction: column;
