@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="author" content="Stephan Risi">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Storymap Assignment</title>
+    <script> $(function(){$("#header").load("header.html");});</script>
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>Storymap Assignment</h1>
+
+                <img src="images/tutorials/storymap.png" alt="Screenshot of a Storymap">
+
+                <p>Due: Sunday, 3/1, 11.59pm</p>
+
+
+                <p>For this assignment, you will use <a href="https://storymap.knightlab.com/">
+                    StoryMap.js</a> to tell a spatial story about the movement of people or
+                    substances across the United States or the world. Storymap gives you a point and
+                    click interface to create these stories and embed them into your website.
+                </p>
+
+
+                <h2>Step 1: Look at Examples</h2>
+                <p>First, have a look at some of the <a href="https://storymap.knightlab.com/#examples">
+                    examples</a> to get a sense of the kinds of stories that you can tell.</p>
+                <p>Note that Storymap can be used to tell stories using both maps and images, for
+                example <a href="https://storymap.knightlab.com/examples/bosch-garden/">
+                        Hieronymus Bosch's Garden of Earthly Delights.</a>
+                Using images, so called Gigapixels, is a bit too complicated for this tutorial
+                    but keep in mind that it is a possibility for the final project. Crystal has
+                    written a <a href="https://github.com/crystaljjlee/histsci-119/#making-the-storymaps">
+                        great tutorial</a> on how to create them.
+                </p>
+
+                <h2>Step 2: Watch Crystal's Tutorial</h2>
+                <p>Crystal has recorded a <a href="https://www.youtube.com/watch?v=wZjAc8_VOaY&feature=youtu.be">
+                    short tutorial</a> on how to use Storymap. Have a look!</p>
+
+                <h2>Step 3: Create a 15 minute prototype</h2>
+                <p>Spend about 15 minutes playing around with Storymap. Add slides! Add images!
+                Change the background! Change the map used!
+                </p>
+                <p>You don't need to tell a story yet, just familiarize yourself with the functions
+                that Storymap provides.</p>
+
+                <h2>Step 3.5 (Optional): Use a custom map</h2>
+                <p>Storymap allows you to integrate a wide range of maps. <a href="http://mapwarper.net/">
+                    Map Warper</a> has a large collection of geocoded maps that are ready to be imported.
+                </p>
+                <p>Let's say we want to work with this <a href="http://mapwarper.net/maps/40766">
+                    map of the successes of the suffrage movement from 1919.</a>
+                    To import this map:
+                </p>
+                <ul>
+                    <li>Click on the <a href="http://mapwarper.net/maps/40766#Export_tab">Export</a> tab.
+                    Then find the "Tiles (Google/OSM scheme)" attribute and copy its contents, i.e.
+                    <code>http://mapwarper.net/maps/tile/40766/{z}/{x}/{y}.png</code>
+                    </li>
+                    <li>In Storymap, click "Options in the top left.</li>
+                    <li>In the dialogue field, select "custom" as the "Map Type," which will show
+                        more configuration options.</li>
+                    <li>Copy <code>http://mapwarper.net/maps/tile/40766/{z}/{x}/{y}.png</code> into the
+                        URL field and then close the menu.</li>
+                </ul>
+                <p>This should load your custom map. If you cannot see anything, you might either
+                be too far zoomed in or look at the wrong location. For example, if you have selected
+                a map of DC, the map will only be visible when you are actually looking at DC.</p>
+
+                <h2>Step 4: Deploy your prototype to your website</h2>
+
+                <p>On the storymap website, click the "Share" button on the top right.</p>
+                <p>Scroll down and find the "Embed" code. It will look something like this:</p>
+                <p><code>&ltiframe src="https://uploads.knightlab.com/storymapjs/c6110d70c3383cc90ae51583a6d15d0e/test/index.html"
+                                 frameborder="0" width="100%" height="800"&gt&lt/iframe&gt</code></p>
+                <p>An <code>iframe</code> is essentially a website within a website, i.e. your
+                    browser will first load your website and then load whatever is in the iframe,
+                in this case your Storymap.</p>
+                <p>To get your storymap up and running, your html code should look like this:</p>
+                <img src="images/tutorials/storymap_html.png" alt="Screenshot of html layout to
+                    host storymap.">
+
+
+                <h2>Step 5: Research a Story</h2>
+
+                <h4>Option 1: Create a Storymap around the story of <a href="https://twitter.com/joshclarkdavis/status/1068889697999568897?lang=en">
+                    Keith Jackson</a>, who was framed by the DEA to set up a crack deal near the
+                    White House.
+                </h4>
+                <p>Additional Readings</p>
+                <ul>
+                    <li><a href="https://pointsadhs.com/2016/03/31/keithjacksonmatters-the-kid-that-sold-crack-to-the-president/#more-13876">
+                        Melanie Durfee, "#KEITHJACKSONMATTERS: The Kid That Sold Crack To The President"
+                    </a></li>
+                    <li><a href="https://41s-readings.s3-us-west-2.amazonaws.com/New_Jim_crow.pdf">
+                        Michelle Alexander, <i>The New Jim Crow: Mass Incarceration in the
+                        Age of Colorblindness</i>, Routledge, 2010, Ch. 2.</a></li>
+                </ul>
+
+                <h4>Option 2: Follow the flow of Fentanyl into the United States</h4>
+                <p>How does fentanyl come to the United States? Where is it produced? How does it
+                get distributed?</p>
+                <p>Additional Readings</p>
+                <ul>
+                    <li>
+                        <a href="https://www.washingtonpost.com/investigations/2019/08/23/fentanyl-flowed-through-us-postal-service-vehicles-crossing-southern-border">
+                            Sari Horwitz and Scott Higham, "The flow of fentanyl: In the mail, over the border."
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.sandiegouniontribune.com/news/public-safety/sd-me-fentanyl-pipeline-20180617-story.html">
+                            Kristina Davis and Sandra Dibble, "Fentanyl has taken over America's drug market. Where
+                            is it coming from?"
+                        </a>
+                    </li>
+                </ul>
+
+                <h4>Option 3: Choose your own adventure</h4>
+                <p>Already know a story--whether related to the history of drugs or not--that you want
+                to tell with a storymap? Let me know!</p>
+
+                <p>In each case, make sure to find and reference at least one additional newspaper
+                or academic journal article that you have traced down yourself.</p>
+
+
+                <h2>Step 6: Create your Storymap</h2>
+                <p>Once you have done your research, think about how you want to tell your story.
+                How do you want to follow a person or a substance? What do you want to reader to
+                    take away? What images do you want to use?
+                </p>
+                <p>Then, create a storymap with:</p>
+                <ul>
+                    <li>At least 10 slides with titles and text</li>
+                    <li>At least 5 of those slides should feature images</li>
+                </ul>
+                <p>Finally, host your storymap on pset_storymap.html and send me a link by Sunday
+                night.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
